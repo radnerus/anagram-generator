@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    height: 90vh;
+    max-height: 90vh;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+input[type=text] {
+    border: 2px solid black;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input[type=text]::placeholder {
+    text-align: left;
+}
+
+input[type=text]:focus {
+    outline-width: 0;
+}
+
+#output {
+    height: 70vh;
+    overflow: auto;
+}
+
+.result-summary {
+    font-weight: bold;
+    /* text-decoration: underline; */
+    margin-bottom: 5px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.anagram {
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+#anagram-count {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#typed-word {
+    font-size: 1.3em;
+    font-style: italic;
+    border-bottom: 2.5px solid black;
+    /* Or whatever color you want */
+}
+
+.fa {
+    font-size: 2em;
+    float: right;
+    color: white;
+}
