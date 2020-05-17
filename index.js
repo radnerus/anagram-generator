@@ -9,10 +9,11 @@ const countEle = document.querySelector('#anagram-count');
 const typedWordEle = document.querySelector('#typed-word');
 
 function getAnagrams() {
-  const inputText = inputEle.value;
+  let inputText = inputEle.value;
   console.log(inputText);
   if (inputText.length > MAX_CHARS) {
-    inputEle.value = inputText.substring(0, MAX_CHARS);
+    inputText = inputText.substring(0, MAX_CHARS);
+    inputEle.value = inputText;
   }
   if (inputText) {
     const combinations = getAllCombinations(inputText);
