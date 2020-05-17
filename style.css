@@ -61,8 +61,11 @@ input[type=text]:focus {
 }
 
 #output {
+    margin-top: 10px;
     height: 60vh;
     overflow: auto;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .result-summary {
