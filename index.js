@@ -1,3 +1,5 @@
+const MAX_CHARS = 6;
+
 const inputEle = document.querySelector('#input');
 const generateButtonEle = document.querySelector('#generate');
 const outputContainerEle = document.querySelector('.output-container');
@@ -9,6 +11,9 @@ const typedWordEle = document.querySelector('#typed-word');
 function getAnagrams() {
   const inputText = inputEle.value;
   console.log(inputText);
+  if (inputText.length > MAX_CHARS) {
+    inputEle.value = inputText.substring(0, MAX_CHARS);
+  }
   if (inputText) {
     const combinations = getAllCombinations(inputText);
     outputEle.innerHTML = combinations
@@ -50,7 +55,8 @@ const getAllCombinations = (str) => {
 
 getAnagrams();
 inputEle.addEventListener('keydown', (e) => {
-  if (inputEle.value.length >= 7) {
+  console.log(inputEle.value);
+  if (inputEle.value.length > MAX_CHARS) {
     e.preventDefault();
     return false;
   }
