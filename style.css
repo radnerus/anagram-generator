@@ -61,7 +61,7 @@ input[type=text]:focus {
 }
 
 #output {
-    height: 70vh;
+    height: 60vh;
     overflow: auto;
 }
 
